@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:193157282771:android:a7b81196ff8ab9526a4d26",
+        "mobilesdk_app_id": "1:193157282771:android:29273e37eb49436e6a4d26",
         "android_client_info": {
-          "package_name": "com.staging.customenvrn"
+          "package_name": "com.customenvrn.staging"
         }
       },
       "oauth_client": [],
