@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1090993782135",
+    "project_id": "customenvrn-production",
+    "storage_bucket": "customenvrn-production.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090993782135:android:f256fb672c1a1977c3b572",
+        "android_client_info": {
+          "package_name": "com.customenvrn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_G3U8AAtoPUz4L8tihG2VJefoR1wNNt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

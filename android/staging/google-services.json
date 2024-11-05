@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "193157282771",
+    "project_id": "customenvrn-staging",
+    "storage_bucket": "customenvrn-staging.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193157282771:android:a7b81196ff8ab9526a4d26",
+        "android_client_info": {
+          "package_name": "com.staging.customenvrn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUeE5yRKWfHYR0z5YS4pNBrl29F4gYNy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
