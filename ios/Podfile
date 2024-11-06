@@ -8,6 +8,9 @@ require Pod::Executable.execute_command('node', ['-p',
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
+# Enable modular headers globally
+use_modular_headers!
+
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
@@ -16,6 +19,8 @@ end
 
 target 'CustomENVRN' do
   config = use_native_modules!
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
 
   use_react_native!(
     :path => config[:reactNativePath],
@@ -28,6 +33,23 @@ target 'CustomENVRN' do
     # Pods for testing
   end
 
+
+  target 'CustomENVRN-Staging' do
+    inherit! :complete
+  end
+
+  target 'CustomENVRN-Production' do
+    inherit! :complete
+  end
+
+
+#  ENVFILES = {
+##    'Debug' => '$(PODS_ROOT)/../../.env.staging',
+##    'Release' => '$(PODS_ROOT)/../../.env.production',
+##    'Staging' => '$(PODS_ROOT)/../../.env.staging',
+##    'Production' => '$(PODS_ROOT)/../../.env.production'
+#  }
+
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
@@ -37,4 +59,11 @@ target 'CustomENVRN' do
       # :ccache_enabled => true
     )
   end
+  #  installer.pods_project.targets.each do |target|
+  #   target.build_configurations.each do |config|
+  #     if target.name == 'react-native-config'
+  #       config.build_settings['ENVFILE'] = ENVFILES[config.name]
+  #     end
+  #   end
+  # end
 end
