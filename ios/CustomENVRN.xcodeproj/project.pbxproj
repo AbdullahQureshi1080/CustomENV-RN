@@ -13,7 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3C49B4EDAF8590750C747388 /* Pods_CustomENVRN_CustomENVRN_Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF03E5112CC53E8A4C74A27 /* Pods_CustomENVRN_CustomENVRN_Staging.framework */; };
-		5577CA68B09E0B6CB9BEF978 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		5577CA68B09E0B6CB9BEF978 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		931153ED2CDA40B1000E1771 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		931153EE2CDA40B1000E1771 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -27,6 +27,7 @@
 		9311540A2CDA439B000E1771 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		A7EE5A7788FE9A8FFBC14E77 /* Pods_CustomENVRN_CustomENVRN_Production.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C87BEAFC76BD55CFDA75AF /* Pods_CustomENVRN_CustomENVRN_Production.framework */; };
 		B44E8DB5F065A89300A5B346 /* Pods_CustomENVRN_CustomENVRNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5150B101F94943C41244B79 /* Pods_CustomENVRN_CustomENVRNTests.framework */; };
+		F6A8D20F7ED68B5C0AB62319 /* Pods_CustomENVRN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6B711156F3A6541D330C58 /* Pods_CustomENVRN.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1FE5EFE994C218606A365723 /* Pods-CustomENVRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomENVRN.release.xcconfig"; path = "Target Support Files/Pods-CustomENVRN/Pods-CustomENVRN.release.xcconfig"; sourceTree = "<group>"; };
 		2FF03E5112CC53E8A4C74A27 /* Pods_CustomENVRN_CustomENVRN_Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomENVRN_CustomENVRN_Staging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56155E78C0095FCE688D9800 /* Pods-CustomENVRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomENVRN.debug.xcconfig"; path = "Target Support Files/Pods-CustomENVRN/Pods-CustomENVRN.debug.xcconfig"; sourceTree = "<group>"; };
+		6D6B711156F3A6541D330C58 /* Pods_CustomENVRN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomENVRN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8FD40DD2E4BBB969B1EBBF /* Pods-CustomENVRN-CustomENVRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomENVRN-CustomENVRNTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomENVRN-CustomENVRNTests/Pods-CustomENVRN-CustomENVRNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CustomENVRN/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9059DB786774BAA76F7FD252 /* Pods-CustomENVRN-CustomENVRN-Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomENVRN-CustomENVRN-Staging.release.xcconfig"; path = "Target Support Files/Pods-CustomENVRN-CustomENVRN-Staging/Pods-CustomENVRN-CustomENVRN-Staging.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5577CA68B09E0B6CB9BEF978 /* (null) in Frameworks */,
+				5577CA68B09E0B6CB9BEF978 /* BuildFile in Frameworks */,
+				F6A8D20F7ED68B5C0AB62319 /* Pods_CustomENVRN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +150,7 @@
 				E5150B101F94943C41244B79 /* Pods_CustomENVRN_CustomENVRNTests.framework */,
 				D5C87BEAFC76BD55CFDA75AF /* Pods_CustomENVRN_CustomENVRN_Production.framework */,
 				2FF03E5112CC53E8A4C74A27 /* Pods_CustomENVRN_CustomENVRN_Staging.framework */,
+				6D6B711156F3A6541D330C58 /* Pods_CustomENVRN.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -527,7 +531,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define paths to the GoogleService-Info.plist files for different environments\nPROD_PLIST=\"${SRCROOT}/Firebase/Production/GoogleService-Info.plist\"\nSTAGING_PLIST=\"${SRCROOT}/Firebase/Staging/GoogleService-Info.plist\"\nDEST_PLIST=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\n# Determine the scheme from the environment variable (if you have separate schemes for Staging and Production)\nSCHEME_NAME=\"${SCHEME_NAME}\"\n\n# Check the scheme and configuration to copy the correct plist file\nif [ \"${SCHEME_NAME}\" == \"CustomENVRN-STAGING\" ]; then\n    # Use Staging plist for both Debug and Release configurations in the Staging scheme\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nelif [ \"${SCHEME_NAME}\" == \"CustomENVRN-PRODUCTION\" ]; then\n    # Use Production plist for both Debug and Release configurations in the Production scheme\n    cp \"${PROD_PLIST}\" \"${DEST_PLIST}\"\nelse\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nfi\n";
+			shellScript = "# Define paths to the GoogleService-Info.plist files for different environments\nPROD_PLIST=\"${SRCROOT}/Firebase/Production/GoogleService-Info.plist\"\nSTAGING_PLIST=\"${SRCROOT}/Firebase/Staging/GoogleService-Info.plist\"\nDEST_PLIST=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\n# Determine the scheme from the environment variable (if you have separate schemes for Staging and Production)\nSCHEME_NAME=\"${SCHEME_NAME}\"\n\n# Check the scheme and configuration to copy the correct plist file\nif [ \"${SCHEME_NAME}\" == \"CustomENVRN-Staging\" ]; then\n    # Use Staging plist for both Debug and Release configurations in the Staging scheme\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nelif [ \"${SCHEME_NAME}\" == \"CustomENVRN-Production\" ]; then\n    # Use Production plist for both Debug and Release configurations in the Production scheme\n    cp \"${PROD_PLIST}\" \"${DEST_PLIST}\"\nelse\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nfi\n";
 		};
 		931153F62CDA40B1000E1771 /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -617,7 +621,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define paths to the GoogleService-Info.plist files for different environments\nPROD_PLIST=\"${SRCROOT}/Firebase/Production/GoogleService-Info.plist\"\nSTAGING_PLIST=\"${SRCROOT}/Firebase/Staging/GoogleService-Info.plist\"\nDEST_PLIST=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\n# Determine the scheme from the environment variable (if you have separate schemes for Staging and Production)\nSCHEME_NAME=\"${SCHEME_NAME}\"\n\n# Check the scheme and configuration to copy the correct plist file\nif [ \"${SCHEME_NAME}\" == \"CustomENVRN-STAGING\" ]; then\n    # Use Staging plist for both Debug and Release configurations in the Staging scheme\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nelif [ \"${SCHEME_NAME}\" == \"CustomENVRN-PRODUCTION\" ]; then\n    # Use Production plist for both Debug and Release configurations in the Production scheme\n    cp \"${PROD_PLIST}\" \"${DEST_PLIST}\"\nelse\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nfi\n";
+			shellScript = "# Define paths to the GoogleService-Info.plist files for different environments\nPROD_PLIST=\"${SRCROOT}/Firebase/Production/GoogleService-Info.plist\"\nSTAGING_PLIST=\"${SRCROOT}/Firebase/Staging/GoogleService-Info.plist\"\nDEST_PLIST=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\n# Determine the scheme from the environment variable (if you have separate schemes for Staging and Production)\nSCHEME_NAME=\"${SCHEME_NAME}\"\n\n# Check the scheme and configuration to copy the correct plist file\nif [ \"${SCHEME_NAME}\" == \"CustomENVRN-Staging\" ]; then\n    # Use Staging plist for both Debug and Release configurations in the Staging scheme\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nelif [ \"${SCHEME_NAME}\" == \"CustomENVRN-Production\" ]; then\n    # Use Production plist for both Debug and Release configurations in the Production scheme\n    cp \"${PROD_PLIST}\" \"${DEST_PLIST}\"\nelse\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nfi\n";
 		};
 		9311540B2CDA439B000E1771 /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -685,7 +689,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define paths to the GoogleService-Info.plist files for different environments\nPROD_PLIST=\"${SRCROOT}/Firebase/Production/GoogleService-Info.plist\"\nSTAGING_PLIST=\"${SRCROOT}/Firebase/Staging/GoogleService-Info.plist\"\nDEST_PLIST=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\n# Determine the scheme from the environment variable (if you have separate schemes for Staging and Production)\nSCHEME_NAME=\"${SCHEME_NAME}\"\n\n# Check the scheme and configuration to copy the correct plist file\nif [ \"${SCHEME_NAME}\" == \"CustomENVRN-STAGING\" ]; then\n    # Use Staging plist for both Debug and Release configurations in the Staging scheme\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nelif [ \"${SCHEME_NAME}\" == \"CustomENVRN-PRODUCTION\" ]; then\n    # Use Production plist for both Debug and Release configurations in the Production scheme\n    cp \"${PROD_PLIST}\" \"${DEST_PLIST}\"\nelse\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nfi\n";
+			shellScript = "# Define paths to the GoogleService-Info.plist files for different environments\nPROD_PLIST=\"${SRCROOT}/Firebase/Production/GoogleService-Info.plist\"\nSTAGING_PLIST=\"${SRCROOT}/Firebase/Staging/GoogleService-Info.plist\"\nDEST_PLIST=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\n# Determine the scheme from the environment variable (if you have separate schemes for Staging and Production)\nSCHEME_NAME=\"${SCHEME_NAME}\"\n\n# Check the scheme and configuration to copy the correct plist file\nif [ \"${SCHEME_NAME}\" == \"CustomENVRN-Staging\" ]; then\n    # Use Staging plist for both Debug and Release configurations in the Staging scheme\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nelif [ \"${SCHEME_NAME}\" == \"CustomENVRN-Production\" ]; then\n    # Use Production plist for both Debug and Release configurations in the Production scheme\n    cp \"${PROD_PLIST}\" \"${DEST_PLIST}\"\nelse\n    cp \"${STAGING_PLIST}\" \"${DEST_PLIST}\"\nfi\n";
 		};
 		D4F8A05926D32655E7E6194D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -975,7 +979,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -1056,7 +1063,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
