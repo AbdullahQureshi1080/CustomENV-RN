@@ -6,8 +6,8 @@
  */
 
 import React, {useEffect, useState} from 'react';
-import type {PropsWithChildren} from 'react';
 import {
+  Platform,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -17,20 +17,11 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import Config from 'react-native-config';
 import auth from '@react-native-firebase/auth';
+import {generateRandomYopmail} from './utils';
 
 console.log(Config.API_URL);
 function App(): React.JSX.Element {
@@ -45,35 +36,40 @@ function App(): React.JSX.Element {
 
   // Handle user state changes
   function onAuthStateChanged(user: any) {
+    console.log('User', user);
     setUser(user);
     if (initializing) setInitializing(false);
   }
 
-  auth()
-    .signInAnonymously()
-    .then(() => {
-      console.log('User signed in anonymously');
-    })
-    .catch(error => {
-      if (error.code === 'auth/operation-not-allowed') {
-        console.log('Enable anonymous in your firebase console.');
-      }
+  const signIn = () => {
+    auth()
+      .createUserWithEmailAndPassword(generateRandomYopmail(), 'Test12345@!')
+      .then(() => {
+        console.log('User account created & signed in!');
+      })
+      .catch(error => {
+        if (error.code === 'auth/email-already-in-use') {
+          console.log('That email address is already in use!');
+        }
 
-      console.error(error);
-    });
+        if (error.code === 'auth/invalid-email') {
+          console.log('That email address is invalid!');
+        }
+
+        console.error(error);
+      });
+  };
+
+  const signout = () => {
+    auth()
+      .signOut()
+      .then(() => console.log('User signed out!'));
+  };
 
   useEffect(() => {
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
     return subscriber; // unsubscribe on unmount
   }, []);
-
-  if (!user) {
-    return (
-      <View>
-        <Text>Login</Text>
-      </View>
-    );
-  }
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -84,14 +80,62 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
-        <View
+        <Text
           style={{
-            backgroundColor: 'red',
+            color: '#fff',
+            fontSize: 28,
+            alignSelf: 'center',
+            textAlign: 'center',
           }}>
-          <Text>Welcome {user?.email}</Text>
-          <Text style={{color: '#fff'}}>{Config.API_URL}</Text>
+          {Config.APP_NAME}
+        </Text>
+        <View style={{padding: 20}}>
+          <Text
+            style={{
+              color: '#fff',
+              fontSize: 28,
+            }}>{`App ENV: ${Config.ENV_NAME}`}</Text>
+          <Text style={{color: '#fff', fontSize: 18}}>
+            {'Loaded Configurations:'}
+          </Text>
+          <View>
+            <Text style={{color: '#fff'}}>
+              App Version: {Config.APP_VERSION}
+            </Text>
+            <Text style={{color: '#fff'}}>App Name: {Config.APP_NAME}</Text>
+            <Text style={{color: '#fff'}}>
+              App Identifier: {Config.BUNDLE_IDENTIFIER}
+            </Text>
+            {Platform.OS == 'ios' ? (
+              <Text style={{color: '#fff'}}>
+                Build Number: {Config.BUILD_NUMBER}
+              </Text>
+            ) : (
+              <Text style={{color: '#fff'}}>
+                Version Code: {Config.VERSION_CODE}
+              </Text>
+            )}
+            <Text style={{color: '#fff'}}>API_URL: {Config.API_BASE_URL}</Text>
+          </View>
         </View>
+        {!user ? (
+          <View style={{padding: 20}}>
+            <Text style={{color: '#fff'}} onPress={signIn}>
+              Login
+            </Text>
+          </View>
+        ) : (
+          <View>
+            <View style={{padding: 20}}>
+              <Text style={{color: '#fff'}}>User {user?.email}</Text>
+            </View>
+            <View style={{padding: 20}}>
+              <Text style={{color: '#fff'}} onPress={signout}>
+                signout
+              </Text>
+            </View>
+          </View>
+        )}
       </ScrollView>
     </SafeAreaView>
   );

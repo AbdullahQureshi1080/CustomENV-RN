@@ -88,12 +88,12 @@ android {
 
     namespace "com.customenvrn"
     defaultConfig {
-        applicationId "com.customenvrn"
-        resValue "string", "build_config_package", "com.customenvrn"
+        applicationId project.env.BUNDLE_IDENTIFIER
+        resValue "string", "build_config_package", project.env.BUNDLE_IDENTIFIER
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode  project.env.VERSION_CODE.toInteger()
+        versionName project.env.APP_VERSION
     }
     signingConfigs {
         debug {
@@ -107,20 +107,19 @@ android {
     flavorDimensions "environment"
     productFlavors {
         staging {
-            applicationId "com.customenvrn"
+            applicationId project.env.BUNDLE_IDENTIFIER
             dimension "environment"
             applicationIdSuffix ".staging"
             versionNameSuffix "-staging"
-            resValue "string", "build_config_package", "com.customenvrn"
-            resValue "string", "app_name", "CustomEnvRN (Staging)"
+            resValue "string", "build_config_package", project.env.BUNDLE_IDENTIFIER
+            resValue "string", "app_name", project.env.APP_NAME
         }
         production {
-            applicationId "com.customenvrn"
+            applicationId project.env.BUNDLE_IDENTIFIER
             dimension "environment"
-            // applicationIdSuffix ".production"
             versionNameSuffix "-production"
-            resValue "string", "build_config_package", "com.customenvrn"
-            resValue "string", "app_name", "CustomEnvRN (Production)"
+            resValue "string", "build_config_package", project.env.BUNDLE_IDENTIFIER
+            resValue "string", "app_name", project.env.APP_NAME
         }
     }
 
