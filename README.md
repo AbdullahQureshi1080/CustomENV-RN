@@ -1,17 +1,5 @@
-Got it! Here's the updated, concise version with a note about setting up the React Native environment:
 
----
-
-## Getting Started with React Native
-
-**Note:** Make sure you have completed the React Native environment setup (up to the "Creating a new application" step) before testing this project.
-
-### Step 1: Start the Metro Server
-
-In the root of your React Native project, run the following command:
-
-- **npm**: `npm start`
-- **Yarn**: `yarn start`
+**Note:** Make sure you have completed the React Native environment setup  before testing this project.
 
 ---
 
